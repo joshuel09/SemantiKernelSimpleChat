@@ -5,9 +5,8 @@ import uuid
 import semantic_kernel as sk
 from semantic_kernel.connectors.ai.open_ai import OpenAITextEmbedding, OpenAIChatCompletion
 
-DBA = {}  # DBとして使う
-
-kernel = sk.Kernel()
+DBA = {}  # シンプルなインメモリデータベース
+kernel = sk.Kernel()  # セマンティックカーネルの初期化
 
 os.environ['OPENAI_API_KEY'] = "APIキーを入力してください"
 api_key = os.getenv("OPENAI_API_KEY")
